@@ -9,9 +9,13 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "brcypt": "^1.0.1",
     "clsx": "^2.1.1",
     "framer-motion": "^11.3.20",
+    "mongoose": "^8.5.2",
     "next": "14.2.5",
+    "next-auth": "^5.0.0-beta.18",
     "react": "^18",
     "react-dom": "^18",
     "tailwind-merge": "^2.4.0"

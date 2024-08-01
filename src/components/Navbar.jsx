@@ -3,10 +3,10 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { useState, useEffect, useRef } from 'react';
 
-import Login from '@/components/buttons/Login';
+import Btn from '@/components/buttons/Login';
 import { navbarContent, servicesList, AboutList, ContactList, resourcesList } from '@/components/Content';
 
-export default function Navbar() {
+export default function Navbar({session}) {
   const [activeList, setActiveList] = useState(null);
   const [toggle, setToggle] = useState(false);
   const [mobileDropdown, setMobileDropdown] = useState(null);
@@ -146,7 +146,7 @@ export default function Navbar() {
           </section>
           <section className="group flex lg:gap-2 justify-center items-center">
             <div className="flex shrink-0">
-              <Login />
+              {session?.user ? <Btn text="Logout"/> : <Btn text="Login"/>}
             </div>
           </section>
         </nav>
@@ -246,7 +246,7 @@ export default function Navbar() {
           </div>
         ))}
         <div className="pl-[17px] mt-[10px]">
-          <Login />
+        {session?.user ? <Btn text="Logout"/> : <Btn text="Login"/>}
         </div>
       </div>
     </>

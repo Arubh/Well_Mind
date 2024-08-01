@@ -2,8 +2,7 @@
 import React, { useEffect, useState } from 'react';
 import NewsCard from '@/components/newsCard';
 
-const API_KEY = 'fec15366a25844f8bf372a05a96b734a';
-const BASE_URL = 'https://newsapi.org/v2/top-headlines?language=en&category=health&pageSize=6&apiKey=' + API_KEY;
+const BASE_URL = `https://newsapi.org/v2/top-headlines?language=en&category=health&pageSize=6&apiKey=${process.env.NEXT_PUBLIC_NEWS_API_KEY}`;
 
 export default function News() {
   const [news, setNews] = useState([]);
@@ -11,7 +10,7 @@ export default function News() {
   const [error, setError] = useState(null);
   const [currentPage, setCurrentPage] = useState(1);
   const [totalResults, setTotalResults] = useState(0);
-  const [columns, setColumns] = useState(3); // Number of columns in grid
+  const [columns, setColumns] = useState(3);
 
   useEffect(() => {
     const fetchNews = async (page = 1) => {
@@ -37,12 +36,11 @@ export default function News() {
   if (status === 'loading') return <div>Loading...</div>;
   if (status === 'failed') return <div>Error: {error}</div>;
 
-  // Filter out articles with title '[Removed]'
   const filteredNews = news.filter(article => article.title !== '[Removed]');
 
   return (
     <div className="flex flex-col items-center justify-center px-auto mt-10">
-      <div className={`grid grid-cols-${columns} gap-4`}>
+      <div>
         {filteredNews.map((news, index) => (
           <div key={index} className="">
             <NewsCard news={news} />
