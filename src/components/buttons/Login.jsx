@@ -1,4 +1,4 @@
-import { handleGithubLogout } from "@/utils/action";
+import { handleLogout } from "@/utils/action";
 import Link from "next/link";
 
 
@@ -6,7 +6,7 @@ export default function Btn({text}) {
   return (
     <div>
       {text==="Logout" ? (
-        <form action={handleGithubLogout}>
+        <form action={handleLogout}>
         <button
           type="submit"
           className="inline-flex h-[50px] pt-[19px] pr-[20px] pb-[20px] pl-[20px] justify-center items-center rounded-[10px] border-[2px] border-solid border-[#0E72E8]

@@ -1,12 +1,12 @@
 import LoginForm from "@/components/LoginForm";
-import { handleGithubLogin } from "@/utils/action";
+import { handleGoogleLogin } from "@/utils/action";
 
 const LoginPage = () => {
   return (
     <div className=''>
       <div className=''>
-        <form action={handleGithubLogin}>
-          <button className=''>Login with Github</button>
+        <form action={handleGoogleLogin}>
+          <button className=''>Login with Google</button>
         </form>
         <LoginForm />
       </div>

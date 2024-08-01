@@ -4,14 +4,13 @@ import { User } from "@/utils/models/User"
 import { connectToDB } from "@/utils/dbConnect"
 const bcrypt=require('bcryptjs')
 
-export const handleGithubLogin = async () => {
+export const handleGoogleLogin = async () => {
     'use server'
-    await signIn('github')
+    await signIn('google')
 }
 
-export const handleGithubLogout = async () => {
+export const handleLogout = async () => {
     'use server'
-    console.log("Logout")
     await signOut()
 }
 export const handleRegister = async (previousState, formData) => {
