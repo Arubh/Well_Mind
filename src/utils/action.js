@@ -14,7 +14,7 @@ export const handleLogout = async () => {
     await signOut()
 }
 export const handleRegister = async (previousState, formData) => {
-    const { username, email, password, img, passwordRepeat } =
+    const { username, name, email, password, passwordRepeat } =
         Object.fromEntries(formData);
 
     if (password !== passwordRepeat) {
@@ -24,10 +24,14 @@ export const handleRegister = async (previousState, formData) => {
     try {
         connectToDB();
 
-        const user = await User.findOne({ username });
+        const user1 = await User.findOne({ username });
+        const user2 = await User.findOne({ email })
 
-        if (user) {
-            return { error: "Username already exists" };
+        if (user1) {
+            return { error: "Username already exists. Please choose another username." };
+        }
+        if(user2){
+            return { error: "Email already in use!"}
         }
 
         const salt = await bcrypt.genSalt(10);
@@ -35,14 +39,14 @@ export const handleRegister = async (previousState, formData) => {
 
         const newUser = new User({
             username,
+            name,
             email,
             password: hashedPassword,
-            img,
         });
 
         await newUser.save();
         console.log("saved to db");
-
+        await signIn('credentials', { username, password });
         return { success: true };
     } catch (err) {
         console.log(err);

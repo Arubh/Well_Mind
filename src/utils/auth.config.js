@@ -11,7 +11,6 @@ export const authConfig = {
             //This callback is called whenever a JWT token is created or updated
             if (user) {
                 token.id = user.id
-                token.isAdmin = user.isAdmin
             } 
             return token
             //using this funciton we can modify our jwt token and add fnew ields to it
@@ -20,7 +19,6 @@ export const authConfig = {
             //This callback is called whenever a session is checked or updated.
             if (token) {
                 session.user.id = token.id
-                session.user.isAdmin = token.isAdmin
             }
             return session
             //using this function, we can modify our session through the token
@@ -28,19 +26,14 @@ export const authConfig = {
         authorized({ auth, request }) {
             const user = auth?.user
             //to determine which page the user is trying to access.
-            const isOnAdminPanel = request.nextUrl?.pathname.startsWith("/news");
-            const isOnBlogPage = request.nextUrl?.pathname.startsWith("/professionals");
+            const isOnNewsPage = request.nextUrl?.pathname.startsWith("/news");
+            const isOnProfPage = request.nextUrl?.pathname.startsWith("/professionals");
             const isOnLoginPage = request.nextUrl?.pathname.startsWith("/login");
 
             //only admins can read /admin page
-            if (isOnAdminPanel && !user) {
+            if ((isOnNewsPage || isOnProfPage) && !user) {
                 return false
                 //returning false will redirect the users to the page that we have mentioned above
-            }
-
-            //only authenticated users can reach /blog page
-            if (isOnBlogPage && !user) {
-                return false
             }
             
             //only unauthenticated ones can reach /login page
