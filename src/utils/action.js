@@ -2,7 +2,7 @@
 import { signIn, signOut } from "@/utils/auth"
 import { User } from "@/utils/models/User"
 import { connectToDB } from "@/utils/dbConnect"
-const bcrypt=require('bcryptjs')
+const bcrypt = require('bcryptjs')
 
 export const handleGoogleLogin = async () => {
     'use server'
@@ -14,6 +14,7 @@ export const handleLogout = async () => {
     await signOut()
 }
 export const handleRegister = async (previousState, formData) => {
+    'use server'
     const { username, name, email, password, passwordRepeat } =
         Object.fromEntries(formData);
 
@@ -25,13 +26,13 @@ export const handleRegister = async (previousState, formData) => {
         connectToDB();
 
         const user1 = await User.findOne({ username });
-        const user2 = await User.findOne({ email })
+        const user2 = await User.findOne({ email });
 
         if (user1) {
             return { error: "Username already exists. Please choose another username." };
         }
-        if(user2){
-            return { error: "Email already in use!"}
+        if (user2) {
+            return { error: "Email already in use!" };
         }
 
         const salt = await bcrypt.genSalt(10);
@@ -43,16 +44,20 @@ export const handleRegister = async (previousState, formData) => {
             email,
             password: hashedPassword,
         });
-
         await newUser.save();
         console.log("saved to db");
-        await signIn('credentials', { username, password });
+
+        await signIn("credentials", { username, password });
         return { success: true };
     } catch (err) {
         console.log(err);
-        return { error: "Something went wrong!" };
+
+        if (err.message.includes("CredentialsSignin")) {
+            return { error: "Invalid username or password" };
+        }
+        throw err;
     }
-}
+};
 export const handleLogin = async (prevState, formData) => {
     const { username, password } = Object.fromEntries(formData);
 
@@ -62,7 +67,7 @@ export const handleLogin = async (prevState, formData) => {
         console.log(err);
 
         if (err.message.includes("CredentialsSignin")) {
-            return { error: "Invalid username or password" }; 
+            return { error: "Invalid username or password" };
         }
         throw err;
     }

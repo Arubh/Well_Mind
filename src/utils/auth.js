@@ -46,7 +46,7 @@ export const { handlers: { GET, POST }, auth, signIn, signOut } =
         clientId: process.env.GOOGLE_CLIENT_ID,
         clientSecret: process.env.GOOGLE_CLIENT_SECRET,
       }),
-      CredentialsProvider({
+      CredentialsProvider({ 
         async authorize(credentials) {
           try {
             const user = await login(credentials);

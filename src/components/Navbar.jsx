@@ -15,7 +15,7 @@ export default function Navbar({session}) {
   const navItemRefs = useRef([]);
   const hoverRefs = useRef({});
 
-  const handleMouseEnter = (id) => {
+  const handleMouseEnter = (id) => { 
     setActiveList(id);
     hoverRefs.current[id] = true;
   };

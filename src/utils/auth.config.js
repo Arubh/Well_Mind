@@ -1,3 +1,5 @@
+import { NextResponse } from "next/server";
+
 export const authConfig = {
     pages: {
         signIn: "/login",
@@ -29,6 +31,7 @@ export const authConfig = {
             const isOnNewsPage = request.nextUrl?.pathname.startsWith("/news");
             const isOnProfPage = request.nextUrl?.pathname.startsWith("/professionals");
             const isOnLoginPage = request.nextUrl?.pathname.startsWith("/login");
+            const isOnRegisterPage = request.nextUrl?.pathname.startsWith("/register");
 
             //only admins can read /admin page
             if ((isOnNewsPage || isOnProfPage) && !user) {
@@ -37,7 +40,7 @@ export const authConfig = {
             }
             
             //only unauthenticated ones can reach /login page
-            if (isOnLoginPage && user) {
+            if ((isOnLoginPage || isOnRegisterPage) && user) {
                 return Response.redirect(new URL("/", request.nextUrl));
             }
             return true

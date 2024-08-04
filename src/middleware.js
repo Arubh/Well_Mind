@@ -6,6 +6,6 @@ import { authConfig } from "@/utils/auth.config"
 export default NextAuth(authConfig).auth
 
 export const config = {
-    matcher: ["/((?!api|register|static|.*\\..*|_next).*)"],
+    matcher: ["/((?!api|static|.*\\..*|_next).*)"],
   };
       
