@@ -1,4 +1,4 @@
-import { NextResponse } from "next/server";
+import { NextResponse, NextRequest } from 'next/server'
 
 export const authConfig = {
     pages: {
@@ -11,9 +11,9 @@ export const authConfig = {
     callbacks: {
         async jwt({ token, user }) {
             //This callback is called whenever a JWT token is created or updated
-            if (user) {
-                token.id = user.id
-            } 
+            if (user) {  
+                token.id = user.id 
+            }   
             return token
             //using this funciton we can modify our jwt token and add fnew ields to it
         },
@@ -41,7 +41,7 @@ export const authConfig = {
             
             //only unauthenticated ones can reach /login page
             if ((isOnLoginPage || isOnRegisterPage) && user) {
-                return Response.redirect(new URL("/", request.nextUrl));
+                return NextResponse.redirect(new URL("/", request.nextUrl));
             }
             return true
         },
