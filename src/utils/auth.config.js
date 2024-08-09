@@ -29,12 +29,13 @@ export const authConfig = {
             const user = auth?.user
             //to determine which page the user is trying to access.
             const isOnNewsPage = request.nextUrl?.pathname.startsWith("/news");
+            const isOnQuizPage = request.nextUrl?.pathname.startsWith("/quiz");
             const isOnProfPage = request.nextUrl?.pathname.startsWith("/professionals");
             const isOnLoginPage = request.nextUrl?.pathname.startsWith("/login");
             const isOnRegisterPage = request.nextUrl?.pathname.startsWith("/register");
 
             //only admins can read /admin page
-            if ((isOnNewsPage || isOnProfPage) && !user) {
+            if ((isOnNewsPage || isOnProfPage || isOnQuizPage) && !user) {
                 return false
                 //returning false will redirect the users to the page that we have mentioned above
             }

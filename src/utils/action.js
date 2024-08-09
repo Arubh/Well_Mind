@@ -1,5 +1,5 @@
 'use server'
-import { signIn, signOut } from "@/utils/auth"
+import { signIn, signOut, auth } from "@/utils/auth"
 import { User } from "@/utils/models/User"
 import { connectToDB } from "@/utils/dbConnect"
 const bcrypt = require('bcryptjs')
@@ -74,5 +74,39 @@ export const handleLogin = async (formData) => {
             return { error: "Invalid username or password" };
         }
         throw err;
+    }
+};
+
+export const updateQuizScores = async (quizScores) => {
+    'use server'
+    try {
+        // Connect to the database
+        await connectToDB();
+
+        // Fetch the current session
+        const session = await auth();
+        if (!session || !session.user || !session.user.email) {
+            throw new Error('User not authenticated');
+        }
+
+        // Find the user by email (or username if you prefer)
+        const user = await User.findOne({ email: session.user.email });
+        if (!user) {
+            throw new Error('User not found');
+        }
+
+        // Update or create quiz scores
+        const updatedUser = await User.findOneAndUpdate(
+            { email: session.user.email },
+            { $set: { scores: quizScores } },
+            { new: true} // `upsert` creates a new document if one doesn't exist
+        );
+
+        console.log("Quiz scores updated:", updatedUser);
+
+        return { success: true };
+    } catch (err) { 
+        console.error("Error updating quiz scores:", err);
+        return { error: err.message };
     }
 };

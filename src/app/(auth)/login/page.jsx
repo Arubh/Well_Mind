@@ -3,13 +3,11 @@ import { handleGoogleLogin } from "@/utils/action";
 
 const LoginPage = () => {
   return (
-    <div className=''>
-      <div className=''>
-        <form action={handleGoogleLogin}>
-          <button className=''>Login with Google</button>
-        </form>
-        <LoginForm />
+    <div className='flex'>
+      <div className='w-[600px] h-[670px] flex-1 bg-cover bg-center' style={{ backgroundImage: "url('/images/login.jpg')", }}>
+      
       </div>
+      <LoginForm />
     </div>
   );
 };
