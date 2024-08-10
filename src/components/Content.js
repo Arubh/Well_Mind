@@ -41,7 +41,7 @@ const workingStepsContent = [
   
   const navbarContent = ['Home', 'Services', 'About', 'Contact Us', 'Resources']
   
-  const servicesList = ["quiz","service2"]
+  const servicesList = ["quiz","stats"]
   const AboutList = []
   const ContactList = []
   const resourcesList = ['news','professionals']

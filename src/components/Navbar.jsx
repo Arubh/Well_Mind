@@ -70,7 +70,7 @@ export default function Navbar({session}) {
 
   return (
     <>
-      <div className="container-style items-center justify-center lg:flex hidden pt-2 px-[200px]">
+      <div className="container-style items-center justify-center lg:flex hidden pt-2 px-[200px] mb-2">
         <nav className="flex justify-between w-full text-header-mobile-sb transition-all">
           <section className="flex justify-between shrink-0">
             <Image src="" alt="Logo" width={30} height={30} />
