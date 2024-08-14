@@ -3,6 +3,7 @@ import React, { useState, useEffect } from 'react';
 import Chart from 'chart.js/auto'; // Ensure you have chart.js installed: npm install chart.js
 import { updateQuizScores } from '@/utils/action'; // Adjust the import path if needed
 import { Questions, QuestionCategory, ResponseOptions, ScoringKey } from './data';
+import QuizStart from '@/components/QuizStart';
 
 // Question Component
 const Question = ({ questionObject, onAnswer }) => {
@@ -160,13 +161,7 @@ const Quiz = () => {
 
   if (currentQuestionIndex === null) {
     return (
-      <div id="quiz-box">
-        <h1>Mental Health Screening Quiz</h1>
-        <h2>Would you like to take the questionnaire?</h2>
-        <button className="button" id="yes" onClick={handleStartQuiz}>
-          Start
-        </button>
-      </div>
+      <QuizStart handleStartQuiz={handleStartQuiz}/>
     );
   }
 
