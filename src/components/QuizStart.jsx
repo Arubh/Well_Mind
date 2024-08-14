@@ -17,7 +17,7 @@ export default function QuizStart(props) {
           Are you ready to predict your mental health status?
         </h2>
         <button className="fetch mt-8" id="yes" onClick={props.handleStartQuiz}>
-          Take the quiz
+          Take the quiz 
         </button> 
       </div>
       <style jsx>{`

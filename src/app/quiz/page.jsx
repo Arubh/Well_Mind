@@ -8,7 +8,7 @@ import QuestionCard from '@/components/QuestionCard';
 
 // Quiz Component
 const Quiz = () => {
-  
+
 
   const [currentQuestionIndex, setCurrentQuestionIndex] = useState(null);
   const [questionsAlreadyAsked, setQuestionsAlreadyAsked] = useState([]);
@@ -123,8 +123,9 @@ const Quiz = () => {
 
   if (results) {
     return (
-      <div>
-        <h1>Here is a detailed graphical representation of your quiz results. </h1>
+      <div className="lg:pl-[200px] lg:pr-[400px] px-10 pt-8">
+        <div className="lg:text-4xl text-3xl text-violet font-bold inline-block">Here is a detailed graphical representation of your quiz results</div>
+        {/* <h1>Here is a detailed graphical representation of your quiz results. </h1>
         <h2>Detailed Scores</h2>
         <ul>
           {Object.entries(results).map(([category, score], index) => (
@@ -135,9 +136,32 @@ const Quiz = () => {
         </ul>
         <div className="chart-divs w-[600px]">
           <canvas id="results-chart"></canvas>
+        </div> */}
+        <div className="flip-card w-[660px] h-[400px] mt-4">
+          <div className="flip-card-inner">
+            <div className="flip-card-front">
+              <div className="text-start font-semibold flex pl-[100px] pt-[70px] text-[20px] font-sans">
+                <ul>
+                  {Object.entries(results).map(([category, score], index) => (
+                    <li key={index} className="mb-2">
+                      <span>{category}:</span> {score.toFixed(2)}%
+                    </li>
+                  ))}
+                </ul>
+              </div>
+              <div className="mt-[40px]">Hover to see the graph</div>
+            </div>
+            <div className="flip-card-back flex justify-center">
+              <div className="my-auto">
+                <div className="chart-divs w-[600px]">
+                  <canvas id="results-chart"></canvas>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
-        <button className="button" onClick={resetQuiz}>
-          Take Quiz Again
+        <button className="fetch mt-4" onClick={resetQuiz}>
+          Take Quiz again
         </button>
       </div>
     );
@@ -145,7 +169,7 @@ const Quiz = () => {
 
   if (currentQuestionIndex === null) {
     return (
-      <QuizStart handleStartQuiz={handleStartQuiz}/>
+      <QuizStart handleStartQuiz={handleStartQuiz} />
     );
   }
 
