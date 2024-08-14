@@ -70,10 +70,10 @@ export default function Navbar({session}) {
 
   return (
     <>
-      <div className="container-style items-center justify-center lg:flex hidden pt-2 px-[200px] mb-2">
+      <div className="font-serif container-style items-center justify-center lg:flex hidden pt-2 px-[200px] mb-2">
         <nav className="flex justify-between w-full text-header-mobile-sb transition-all">
           <section className="flex justify-between shrink-0">
-            <Image src="" alt="Logo" width={30} height={30} />
+            <div className='flex items-center text-navyBlue text-[30px] font-semibold font-serif'>Wellmind</div>
           </section>
           <section className="ld:px-6 md:px-2">
             <ul className="flex justify-between list-none items-center lg:px-[5px] md:px-[2px] lg:gap-6 md:gap-2 mt-3">
@@ -85,7 +85,7 @@ export default function Navbar({session}) {
                   onMouseEnter={() => handleMouseEnter(id)}
                   onMouseLeave={() => handleMouseLeave(id)}
                 >
-                  <Link href={nav === 'Merchants' ? 'merchants' : '#'} className="text-[black] hover:text-[#0E72E8] flex justify-end group">
+                  <Link href={nav === 'Home' ? '/' : '#'} className="text-[black] hover:text-[#0E72E8] flex justify-end group">
                     {nav} 
                     {nav !== 'Home' && (
                       (nav === 'Services' && servicesList.length > 0) ||
@@ -116,7 +116,7 @@ export default function Navbar({session}) {
                     (nav === 'Resources' && resourcesList.length > 0)) && (
                     <div
                       ref={(el) => (dropdownRefs.current[id] = el)}
-                      className={`absolute top-[30px] bg-[#FFFFFF] rounded-[10px] w-[200px] p-[8px] shadow-[2px_2px_4px_0px_rgba(0,0,0,0.15)] ${
+                      className={`absolute flex flex-col gap-1 pt-4 top-[30px] bg-navyBlue rounded-[10px] w-[200px] p-[8px] shadow-[2px_2px_4px_0px_rgba(0,0,0,0.15)] ${
                         activeList === id ? 'block' : 'hidden'
                       }`}
                       onMouseEnter={() => handleDropdownMouseEnter(id)}
@@ -133,7 +133,7 @@ export default function Navbar({session}) {
                           className="text-[black] group-hover:text-[#0E72E8]"
                           onClick={handleSubNavClick}
                         >
-                          <div  className="group bg-[#FFFFFF] hover:bg-[#477ec1] rounded-[10px] text-header-mobile-sb p-[16px] cursor-pointer">
+                          <div  className="group rounded-[10px] text-header-mobile-sb p-[16px] cursor-pointer nav-btn">
                             {subNav}
                           </div>
                         </Link>
@@ -154,7 +154,7 @@ export default function Navbar({session}) {
 
       <div className="container-style flex lg:hidden justify-center items-center pt-4">
         <nav className="flex items-center justify-between w-full">
-          <Image src="/favicon.ico" alt="Logo" width={30} height={30} />
+        <div className='flex items-center text-[20px] font-semibold font-serif'>Wellmind</div>
           <div className="flex items-center">
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -178,7 +178,7 @@ export default function Navbar({session}) {
         } w-[92%] h-[97%] mb-[50px] shrink-0 rounded-[5px] shadow-[0px_0px_10px_2px_rgba(0,0,0,0.15)] bg-[#FFFFFF] z-[100000]`}
       >
         <div className="flex justify-between">
-          <Image src="/favicon.ico" alt="logo" width={30} height={10} className="ml-[15px] mt-[10px]" />
+            <div className='flex items-center text-[20px] font-semibold font-serif ml-4'>Wellmind</div>
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width="40"
@@ -198,7 +198,7 @@ export default function Navbar({session}) {
               onClick={() => toggleMobileDropdown(id)}
             >
               <Link
-                href={nav === 'Merchants' ? 'merchants' : '#'}
+                href={nav === 'Home' ? '/' : '#'}
                 className="text-[black] hover:text-[#0E72E8]"
               >
                 {nav}

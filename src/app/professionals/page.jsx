@@ -58,7 +58,7 @@ const ProfessionalsPage = () => {
         <div className='flex justify-center'>
           <button onClick={handleLocationFetch} disabled={loading} className='fetch'>
             {loading ? 'Fetching Details...' : 'Find psychiatrists'}
-          </button>
+          </button> 
         </div>
       </div>
       {error && <p>Error: {error}</p>}

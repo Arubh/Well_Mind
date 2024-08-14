@@ -14,7 +14,9 @@ module.exports = {
       },
     },
     colors: {
-      'navyBlue': '#085cac'
+      'navyBlue': '#085cac',
+      'violet': '#604cb4',
+      'azure': '#2596be',
     }
   },
   plugins: [],
