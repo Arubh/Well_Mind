@@ -4,23 +4,7 @@ import Chart from 'chart.js/auto'; // Ensure you have chart.js installed: npm in
 import { updateQuizScores } from '@/utils/action'; // Adjust the import path if needed
 import { Questions, QuestionCategory, ResponseOptions, ScoringKey } from './data';
 import QuizStart from '@/components/QuizStart';
-
-// Question Component
-const Question = ({ questionObject, onAnswer }) => {
-  return (
-    <div>
-      <h1>Question {questionObject.index + 1}</h1>
-      <p>{questionObject.question}</p> 
-      <ul>
-        {questionObject.responseOptions.map((option, index) => (
-          <li key={index} onClick={() => onAnswer(index)}>
-            {option}
-          </li>
-        ))}
-      </ul>
-    </div>
-  );
-};
+import QuestionCard from '@/components/QuestionCard';
 
 // Quiz Component
 const Quiz = () => {
@@ -140,10 +124,7 @@ const Quiz = () => {
   if (results) {
     return (
       <div>
-        <h1>Questionnaire Results</h1>
-        <div className="chart-divs">
-          <canvas id="results-chart"></canvas>
-        </div>
+        <h1>Here is a detailed graphical representation of your quiz results. </h1>
         <h2>Detailed Scores</h2>
         <ul>
           {Object.entries(results).map(([category, score], index) => (
@@ -152,6 +133,9 @@ const Quiz = () => {
             </li>
           ))}
         </ul>
+        <div className="chart-divs w-[600px]">
+          <canvas id="results-chart"></canvas>
+        </div>
         <button className="button" onClick={resetQuiz}>
           Take Quiz Again
         </button>
@@ -166,9 +150,7 @@ const Quiz = () => {
   }
 
   return (
-    <Question
-      questionObject={questionObjects[currentQuestionIndex]}
-      onAnswer={handleAnswer}
+    <QuestionCard questionObject={questionObjects[currentQuestionIndex]} onAnswer={handleAnswer}
     />
   );
 };
