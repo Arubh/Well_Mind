@@ -137,10 +137,10 @@ const Quiz = () => {
         <div className="chart-divs w-[600px]">
           <canvas id="results-chart"></canvas>
         </div> */}
-        <div className="flip-card w-[660px] h-[400px] mt-4">
+        <div className="flip-card md:w-[660px] w-auto h-[450px] mt-4">
           <div className="flip-card-inner">
             <div className="flip-card-front">
-              <div className="text-start font-semibold flex pl-[100px] pt-[70px] text-[20px] font-sans">
+              <div className="text-start font-semibold flex sm:pl-[80px] pl-6 sm:pt-[70px] pt-12 md:text-[25px] text-[20px] font-sans">
                 <ul>
                   {Object.entries(results).map(([category, score], index) => (
                     <li key={index} className="mb-2">
@@ -153,7 +153,7 @@ const Quiz = () => {
             </div>
             <div className="flip-card-back flex justify-center">
               <div className="my-auto">
-                <div className="chart-divs w-[600px]">
+                <div className="chart-divs md:w-[600px] w-full">
                   <canvas id="results-chart"></canvas>
                 </div>
               </div>
