@@ -32,13 +32,13 @@ const LoginForm = () => {
     <div className="form-container font-serif w-80 rounded-lg p-8 text-gray-200">
       <form className="form mt-6" onSubmit={onSubmit}>
         <div class="relative">
-          <input placeholder="Type here" class="input-field" type="text" name="username" id="username" />
+          <input placeholder="Enter your username" class="input-field" type="text" name="username" id="username" />
           <label htmlFor="username" class="input-label">Username</label>
-          <span class="input-highlight"></span>
+          <span class="input-highlight"></span> 
         </div>
 
         <div class="relative mt-10">
-          <input placeholder="Type here" class="input-field" type="password" name="password" id="password" />
+          <input placeholder="Enter your password" class="input-field" type="password" name="password" id="password" />
           <label htmlFor="password" class="input-label">Password</label>
           <span class="input-highlight"></span>
         </div>
