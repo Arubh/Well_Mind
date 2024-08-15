@@ -1,26 +1,35 @@
-import React from 'react';
+import Image from "next/image";
 
-const HomeCard = ({ props }) => {
-  const { imageURL, title, heading, description, extraLarge, imageRight } = props;
+const HomeCard = (props) => {
 
-  const textSize = extraLarge ? 'text-md' : 'text-base';
+  const ordering = props.pos_left ? ['lg:order-first', 'lg:order-last'] : ['lg:order-last', 'lg:order-first'];
+
+  const extraLarge = {
+    panelWidth: '',
+    textSize: {
+      sm: 'text-sm',
+      mid: '',
+    },
+    divWidth: '',
+  };
+
+  extraLarge.panelWidth = props.extraLarge ? 'lg:max-w-6xl' : 'lg:max-w-4xl';
+  extraLarge.divWidth = props.extraLarge ? 'max-w-lg' : 'max-w-md';
+  extraLarge.textSize.sm = props.extraLarge ? 'text-md' : 'text-sm';
+  extraLarge.textSize.mid = props.extraLarge ? 'text-md' : 'text-base';
 
   return (
-    <div className={`max-w-lg mx-auto my-8 p-6 bg-white shadow-lg rounded-lg flex md:flex-row ${imageRight ? 'flex' : 'flex-col-reverse'}`}>
-      {/* Image on the left or right based on `imageRight` and on top for mobile */}
-      <img
-        src={imageURL}
-        alt={title}
-        className={`w-full h-48 object-cover rounded-t-lg mb-4 md:mb-0 md:w-1/2 
-        }`}
-      />
-      <div className="p-4 md:w-1/2">
-        <h3 className={`font-bold ${textSize}`}>{title}</h3>
-        <h4 className="text-xl font-semibold mt-2">{heading}</h4>
-        <p className="text-gray-600 mt-4">{description}</p>
+    <div className={`font-serif max-w-sm mx-auto sm:max-w-md flex flex-col lg:flex-row justify-center items-center ${extraLarge.panelWidth} gap-0 px-2`}>
+      <div className={`${ordering[0]}`}>
+        <Image className="rounded-[20px] w-[320px] h-[220px]" src={props.imageURL} alt={props.heading || ''} width={400} height={400} />
+      </div>
+      <div className={`transition-transform duration-300 ease-in-out transform hover:scale-110 w-full h-[100%] flex flex-col justify-center gap-4 px-8 text-sub-text-color ${extraLarge.divWidth} ${ordering[1]}`}>
+        <h1 className={`font-sans font-bold ${extraLarge.textSize.mid}`}>{props.title}</h1>
+        <h1 className={`font-sans font-semibold ${extraLarge.textSize.mid}`}>{props.heading}</h1>
+        <p>{props.description}</p>
       </div>
     </div>
   );
-};
+}
 
 export default HomeCard;

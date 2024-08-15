@@ -64,7 +64,7 @@ const workingStepsContent = [
       imageRight: true, // Image on the right
     },
     {
-      imageURL: '/images/anxiety.jpg',
+      imageURL: '/images/peace.jpg',
       title: 'Managing Anxiety',
       heading: 'Finding Peace in a Stressful World.',
       description: 'Anxiety disorders involve excessive fear or worry that can interfere with daily life. Understanding the triggers and learning coping mechanisms are vital steps in managing anxiety.',
@@ -80,7 +80,7 @@ const workingStepsContent = [
       imageRight: true, // Image on the right
     },
     {
-      imageURL: '/images/mental-health.jpg',
+      imageURL: '/images/mental.jpg',
       title: 'Overall Mental Health',
       heading: 'Nurturing a Balanced Mind.',
       description: 'Mental health encompasses emotional, psychological, and social well-being. It affects how we think, feel, and act. Promoting mental health is vital for overall well-being and quality of life.',

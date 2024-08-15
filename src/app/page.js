@@ -16,15 +16,22 @@ export default function Page() {
         }}
       >
         <div className="text-[60px] mx-auto font-serif align-top text-[white] dark:text-[white]">
-          Nurture your 
+          Nurture your
           <Flipwords words={words} /> <br />with us
         </div>
       </div>
-      <div>
+      <div className="mt-[100px] flex flex-col gap-20">
         {homeProps.map((props, index) => (
-          <HomeCard key={index} props={props} />
+          <HomeCard
+            key={index}
+            pos_left={!props.imageRight} // Use imageRight to determine the position
+            extraLarge={props.extraLarge} // Pass extraLarge property
+            description={props.description}
+            heading={props.heading}
+            imageURL={props.imageURL}
+            title={props.title} />
         ))}
-      </div>
+      </div>  
     </div>
   );
 }
