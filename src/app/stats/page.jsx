@@ -6,48 +6,94 @@ import PtsdChart from '@/components/charts/PtsdChart'
 
 export default function page() {
   return (
-    <div>
-      <h1 id="chart-h1">Statistics</h1>
-        <section>
-          <h2>Prevalence of Mental Health Conditions</h2>
-          <div className="chart-divs">
-            <PrevalenceChart />
+    <div className='lg:pl-[200px] lg:pr-[200px] px-10 pt-8 mt-2'>
+       <h2
+          className="lg:text-6xl text-5xl font-bold inline-block text-transparent bg-clip-text"
+          style={{
+            backgroundImage: 'linear-gradient(to right, red, orange, yellow)',
+            backgroundSize: '200% 200%',
+            animation: 'moveGradient 10s ease infinite',
+            WebkitBackgroundClip: 'text',
+            WebkitTextFillColor: 'transparent',
+          }}
+        > 
+          Statistical data from the past years 
+        </h2>
+      <div className="flip-card md:w-[680px] w-auto h-[50vw] md:h-[41vw] lg:h-[33vw] xl:h-[28vw] mt-10">
+        <div className="flip-card-inner">
+          <div className="flip-card-front">
+            <div className="chart-divs">
+              <PrevalenceChart />
+            </div>
           </div>
-          <a href="https://www.nimh.nih.gov/health/statistics/mental-illness"><cite>https://www.nimh.nih.gov/health/statistics/mental-illness</cite></a>
-          <a href="https://www.hopkinsmedicine.org/health/wellness-and-prevention/mental-health-disorder-statistics"><cite>https://www.hopkinsmedicine.org/health/wellness-and-prevention/mental-health-disorder-statistics</cite></a>
-        </section>
+          <div className="flip-card-back">
+          <div className='overflow-clip'>
+              <a href="https://www.nimh.nih.gov/health/statistics/mental-illness"><cite>https://www.nimh.nih.gov/health/statistics/mental-illness</cite></a>
+              <a href="https://www.hopkinsmedicine.org/health/wellness-and-prevention/mental-health-disorder-statistics"><cite>https://www.hopkinsmedicine.org/health/wellness-and-prevention/mental-health-disorder-statistics</cite></a>
+            </div>
+          </div>
+        </div>
+      </div>
 
-        <section>
-          <h2>Proportion That Received Treatment in Past Year</h2>
-          <div className="chart-divs">
+       <div className="flip-card md:w-[680px] w-auto h-[50vw] md:h-[41vw] lg:h-[33vw] xl:h-[28vw] mt-10">
+        <div className="flip-card-inner">
+          <div className="flip-card-front">
+            <div className="chart-divs">
             <RecievedCareChart />
+            </div>
           </div>
-          <a href="https://www.nimh.nih.gov/health/statistics/mental-illness"><cite>https://www.nimh.nih.gov/health/statistics/mental-illness</cite></a>
-        </section>
+          <div className="flip-card-back">
+            <div>
+              <a href="https://www.nimh.nih.gov/health/statistics/mental-illness"><cite>https://www.nimh.nih.gov/health/statistics/mental-illness</cite></a>
+            </div>
+          </div>
+        </div>
+      </div>
 
-        <section>
-          <h2>Symptoms of Anxiety or Depression During Past 7 Days</h2>
-          <div className="chart-divs">
+      <div className="flip-card md:w-[680px] w-auto h-[50vw] md:h-[41vw] lg:h-[33vw] xl:h-[28vw] mt-10">
+        <div className="flip-card-inner">
+          <div className="flip-card-front">
+            <div className="chart-divs">
             <DepressionChart />
+            </div>
           </div>
-          <a href="https://www.cdc.gov/mmwr/volumes/70/wr/mm7013e2.htm"><cite>https://www.cdc.gov/mmwr/volumes/70/wr/mm7013e2.htm</cite></a>
-        </section>
+          <div className="flip-card-back">
+            <div>
+              <a href="https://www.cdc.gov/mmwr/volumes/70/wr/mm7013e2.htm"><cite>https://www.cdc.gov/mmwr/volumes/70/wr/mm7013e2.htm</cite></a>
+            </div>
+          </div>
+        </div>
+      </div>
 
-        <section>
-          <h2>Suicide Rates</h2>
-          <div className="chart-divs">
+      <div className="flip-card md:w-[680px] w-auto h-[50vw] md:h-[41vw] lg:h-[33vw] xl:h-[28vw] mt-10">
+        <div className="flip-card-inner">
+          <div className="flip-card-front">
+            <div className="chart-divs">
             <SuicideRatesChart />
+            </div>
           </div>
-          <a href="https://www.cdc.gov/nchs/products/databriefs/db241.htm"><cite>https://www.cdc.gov/nchs/products/databriefs/db241.htm</cite></a>
-        </section>
+          <div className="flip-card-back">
+            <div>
+              <a href="https://www.cdc.gov/nchs/products/databriefs/db241.htm"><cite>https://www.cdc.gov/nchs/products/databriefs/db241.htm</cite></a>
+            </div>
+          </div>
+        </div>
+      </div>
 
-        <section>
-          <h2>PTSD Prevalence Past Year (2001-2003)</h2>
-          <div className="chart-divs">
+      <div className="flip-card md:w-[680px] w-auto h-[50vw] md:h-[41vw] lg:h-[33vw] xl:h-[28vw] mt-10">
+        <div className="flip-card-inner">
+          <div className="flip-card-front">
+            <div className="chart-divs">
             <PtsdChart />
+            </div>
           </div>
-          <a href="https://www.nimh.nih.gov/health/statistics/post-traumatic-stress-disorder-ptsd"><cite>https://www.nimh.nih.gov/health/statistics/post-traumatic-stress-disorder-ptsd</cite></a>
-        </section>
+          <div className="flip-card-back">
+            <div>
+              <a href="https://www.nimh.nih.gov/health/statistics/post-traumatic-stress-disorder-ptsd"><cite>https://www.nimh.nih.gov/health/statistics/post-traumatic-stress-disorder-ptsd</cite></a>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   )
 }

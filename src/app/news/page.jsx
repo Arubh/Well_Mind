@@ -18,7 +18,7 @@ export default function News() {
       try {
         const response = await fetch(`${BASE_URL}&page=${page}`, { cache: "no-store" });
         if (!response.ok) {
-          throw new Error('Network response was not ok');
+          throw new Error('Network response w as not ok');
         }
         const data = await response.json();
         setNews(data.articles);

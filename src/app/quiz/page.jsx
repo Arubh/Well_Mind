@@ -143,12 +143,16 @@ const Quiz = () => {
               <div className="text-start font-semibold flex sm:pl-[80px] pl-6 sm:pt-[70px] pt-12 md:text-[25px] text-[20px] font-sans">
                 <ul>
                   {Object.entries(results).map(([category, score], index) => (
-                    <li key={index} className="mb-2">
-                      <span>{category}:</span> {score.toFixed(2)}%
+                    <li key={index} className={score.toFixed(2) > 80 ? 'text-[#ff0000] mb-2' : 'text-azure mb-2'}>
+                      <span>
+                        {category}:
+                      </span>{' '}
+                      {score.toFixed(2)}%
                     </li>
                   ))}
                 </ul>
               </div>
+
               <div className="mt-[40px]">Hover to see the graph</div>
             </div>
             <div className="flip-card-back flex justify-center">

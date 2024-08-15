@@ -53,7 +53,7 @@ module.exports = {
             transform: "translateY(-50%)",
           },
         },
-      }
+      } 
     },
     colors: {
       'navyBlue': '#085cac',
