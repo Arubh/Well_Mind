@@ -33,9 +33,10 @@ export const authConfig = {
             const isOnProfPage = request.nextUrl?.pathname.startsWith("/professionals");
             const isOnLoginPage = request.nextUrl?.pathname.startsWith("/login");
             const isOnRegisterPage = request.nextUrl?.pathname.startsWith("/register");
+            const isOnProfilePage = request.nextUrl?.pathname.startsWith("/profile");
 
             //only admins can read /admin page
-            if ((isOnNewsPage || isOnProfPage || isOnQuizPage) && !user) {
+            if ((isOnNewsPage || isOnProfPage || isOnQuizPage ||  isOnProfilePage) && !user) {
                 return false
                 //returning false will redirect the users to the page that we have mentioned above
             }

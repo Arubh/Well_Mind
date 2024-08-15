@@ -144,7 +144,7 @@ export default function Navbar({session}) {
             </ul>
           </section>
           <section className="group flex lg:gap-2 justify-center items-center">
-            {session && <div>Your profile</div>}
+            {session && <div><Link href="/profile">Profile</Link></div>}
             <div className="flex shrink-0">
               {session?.user ? <Btn text="Logout"/> : <Btn text="Login"/>}
             </div>
@@ -154,7 +154,7 @@ export default function Navbar({session}) {
 
       <div className="container-style flex lg:hidden justify-center items-center pt-4">
         <nav className="flex items-center justify-between w-full">
-        <div className='flex items-center text-[20px] font-semibold font-serif'>Wellmind</div>
+        <div className='flex items-center text-[20px] font-semibold font-serif pl-[40px]'>Wellmind</div>
           <div className="flex items-center">
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -245,6 +245,7 @@ export default function Navbar({session}) {
             ))}
           </div>
         ))}
+        {session && <div className='pl-[18px] text-txt-sb h-[40px] cursor-pointer mt-4 font-semibold'><Link href="/profile">Profile</Link></div>}
         <div className="pl-[17px] mt-[10px]">
         {session?.user ? <Btn text="Logout"/> : <Btn text="Login"/>}
         </div>
