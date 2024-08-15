@@ -2,7 +2,6 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import { useState, useEffect, useRef } from 'react';
-
 import Btn from '@/components/buttons/Login';
 import { navbarContent, servicesList, AboutList, ContactList, resourcesList } from '@/components/Content';
 
