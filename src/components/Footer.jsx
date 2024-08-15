@@ -140,7 +140,6 @@ export default function Footer() {
               >Help</a>
             </p>
           </div>
-          {/* <!-- Contact section --> */}
           <div>
             <h6
               className="mb-4 flex justify-center font-semibold uppercase md:justify-start">
@@ -201,14 +200,12 @@ export default function Footer() {
           </div>
         </div>
       </div>
-
-      {/* <!--Copyright section--> */}
       <div className="bg-neutral-200 p-6 text-center dark:bg-neutral-700">
-        <span>© 2023 Copyright:</span>
+        <span>© 2024 Copyright:</span>
         <a
           className="font-semibold text-neutral-600 dark:text-neutral-400"
           href="https://tw-elements.com/"
-        >TW Elements</a>
+        >Wellmind</a>
       </div>
     </footer>
   );
