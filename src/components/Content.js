@@ -41,10 +41,10 @@ const workingStepsContent = [
   
   const navbarContent = ['Home', 'Services', 'About', 'Contact', 'Resources']
   
-  const servicesList = ["quiz","stats"]
+  const servicesList = ["Quiz","Stats"]
   const AboutList = []
   const ContactList = []
-  const resourcesList = ['news','professionals']
+  const resourcesList = ['News','Professionals']
 
   const homeProps = [
     {

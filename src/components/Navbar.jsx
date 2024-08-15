@@ -84,7 +84,7 @@ export default function Navbar({session}) {
                   onMouseEnter={() => handleMouseEnter(id)}
                   onMouseLeave={() => handleMouseLeave(id)}
                 >
-                  <Link href={nav === 'Home' ? '/' : '#'} className="text-[black] hover:text-[#0E72E8] flex justify-end group">
+                  <Link href={nav === 'Home' ? '/' : nav==='About' ? '/about' : '#'} className="text-[black] hover:text-[#0E72E8] flex justify-end group">
                     {nav} 
                     {nav !== 'Home' && (
                       (nav === 'Services' && servicesList.length > 0) ||
