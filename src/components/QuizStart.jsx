@@ -12,7 +12,7 @@ export default function QuizStart(props) {
             animation: 'moveGradient 10s ease infinite', // Attach the animation
             WebkitBackgroundClip: 'text',
             WebkitTextFillColor: 'transparent',
-          }}
+          }} 
         > 
           Are you ready to predict your mental health status?
         </h2>
