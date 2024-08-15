@@ -73,7 +73,7 @@ export default function Navbar({session}) {
       <div className="font-serif container-style items-center justify-center lg:flex hidden pt-2 px-[200px] mb-2">
         <nav className="flex justify-between w-full text-header-mobile-sb transition-all">
           <section className="flex justify-between shrink-0">
-            <div className='flex items-center text-navyBlue text-[30px] font-semibold font-serif'>Wellmind</div>
+          <Link href="/" className='flex items-center text-navyBlue text-[30px] font-semibold font-serif'>Wellmind</Link>
           </section>
           <section className="ld:px-6 md:px-2">
             <ul className="flex justify-between list-none items-center lg:px-[5px] md:px-[2px] lg:gap-6 md:gap-2 mt-3">
