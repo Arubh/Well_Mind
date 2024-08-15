@@ -1,15 +1,15 @@
 import React from 'react';
+import Link from 'next/link';
 
-export default function App() {
+export default function Footer() {
   return (
     <footer
-      className="bg-neutral-100 text-center text-neutral-600 dark:bg-neutral-600 dark:text-neutral-200 lg:text-left">
+      className="bg-navyBlue text-[white] font-sans text-center lg:text-left mt-[200px]">
       <div
         className="flex items-center justify-center border-b-2 border-neutral-200 p-6 dark:border-neutral-500 lg:justify-between">
         <div className="mr-12 hidden lg:block">
           <span>Get connected with us on social networks:</span>
         </div>
-        {/* <!-- Social network icons container --> */}
         <div className="flex justify-center">
           <a className="mr-6 text-neutral-600 dark:text-neutral-200">
             <svg
@@ -76,10 +76,8 @@ export default function App() {
         </div>
       </div>
 
-      {/* <!-- Main container div: holds the entire content of the footer, including four sections (TW Elements, Products, Useful links, and Contact), with responsive styling and appropriate padding/margins. --> */}
       <div className="mx-6 py-10 text-center md:text-left">
         <div className="grid-1 grid gap-8 md:grid-cols-2 lg:grid-cols-4">
-          {/* <!-- TW Elements section --> */}
           <div className="">
             <h6
               className="mb-4 flex items-center justify-center font-semibold uppercase md:justify-start">
@@ -91,35 +89,32 @@ export default function App() {
                 <path
                   d="M12.378 1.602a.75.75 0 00-.756 0L3 6.632l9 5.25 9-5.25-8.622-5.03zM21.75 7.93l-9 5.25v9l8.628-5.032a.75.75 0 00.372-.648V7.93zM11.25 22.18v-9l-9-5.25v8.57a.75.75 0 00.372.648l8.628 5.033z" />
               </svg>
-              TW Elements
+              Wellmind
             </h6>
-            <p>
-              Here you can use rows and columns to organize your footer
-              content. Lorem ipsum dolor sit amet, consectetur adipisicing
-              elit.
+            <p className='font-semibold'>
+              Your go to destination for mental well-being, completely FREE!
             </p>
           </div>
-          {/* <!-- Products section --> */}
           <div className="">
-            <h6
+            <p 
               className="mb-4 flex justify-center font-semibold uppercase md:justify-start">
-              Products
-            </h6>
-            <p className="mb-4">
-              <a className="text-neutral-600 dark:text-neutral-200"
-              >Angular</a>
+              Services
             </p>
             <p className="mb-4">
-              <a className="text-neutral-600 dark:text-neutral-200"
-              >React</a>
+              <Link href="/quiz" className="text-neutral-600 dark:text-neutral-200"
+              >Quiz</Link>
             </p>
             <p className="mb-4">
-              <a className="text-neutral-600 dark:text-neutral-200"
-              >Vue</a>
+              <Link href="/professionals" className="text-neutral-600 dark:text-neutral-200"
+              >Professional Help</Link>
+            </p>
+            <p className="mb-4">
+              <Link href="/stats" className="text-neutral-600 dark:text-neutral-200"
+              >Statistics</Link>
             </p>
             <p>
-              <a className="text-neutral-600 dark:text-neutral-200"
-              >Laravel</a>
+              <Link href="/news" className="text-neutral-600 dark:text-neutral-200"
+              >News</Link>
             </p>
           </div>
           {/* <!-- Useful links section --> */}
