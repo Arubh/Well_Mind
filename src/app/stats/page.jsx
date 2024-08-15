@@ -7,7 +7,7 @@ import Link from 'next/link'
 
 export default function page() {
   return (
-    <div className='lg:pl-[200px] lg:pr-[200px] px-10 pt-8 mt-2'>
+    <div className='lg:pl-[200px] lg:pr-[200px] px-10 pt-8 mt-2 mb-[200px]'>
       <h2
         className="lg:text-6xl text-5xl font-bold inline-block text-transparent bg-clip-text"
         style={{
