@@ -130,7 +130,7 @@ export default function Navbar({session}) {
                         <Link
                           key={subId}
                           href={subNav.toLowerCase().replace(/ /g, '')}
-                          className="text-[black] group-hover:text-[#0E72E8]"
+                          className="text-[white] hover:text-[black] group-hover:text-[#0E72E8]"
                           onClick={handleSubNavClick}
                         >
                           <div  className="group rounded-[10px] text-header-mobile-sb p-[16px] cursor-pointer nav-btn">
