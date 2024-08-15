@@ -1,6 +1,8 @@
+'use client'
 import { Flipwords } from "../components/ui/flip-words";
 import HomeCard from "@/components/HomeCard";
-import { homeProps } from "@/components/Content"; // Assuming homeProps is exported from here
+import { homeProps } from "@/components/Content";
+import Link from "next/link";
 
 export default function Page() {
   const words = ["mind", "soul", "body", "life"];
@@ -20,7 +22,7 @@ export default function Page() {
           <Flipwords words={words} /> <br />with us
         </div>
       </div>
-      <div className="mt-[100px] flex flex-col gap-20">
+      <div className="mt-[60px] flex flex-col gap-20">
         {homeProps.map((props, index) => (
           <HomeCard
             key={index}
@@ -31,7 +33,37 @@ export default function Page() {
             imageURL={props.imageURL}
             title={props.title} />
         ))}
-      </div>  
+      </div>
+      <div className="bg-violet mt-16 h-[300px] mb-[100px] flex justify-center items-center" style={{
+        backgroundImage: 'linear-gradient(to right, red, pink, violet)',
+        animation: 'moveGradient 5s ease infinite',
+        backgroundSize: '200% 200%',
+      }}>
+        <div className="lg:pl-[200px] lg:pr-[400px] px-10 pt-8">
+          <h2
+            className="lg:text-6xl text-5xl font-bold inline-block text-[white]"
+          >
+            Take a personalised quiz now !
+          </h2>
+          <button className="mt-10 bg-transparent border-2 border-navyBlue rounded-lg text-navyBlue hover:text-[white] cursor-pointer inline-block font-semibold text-base leading-normal m-0 min-h-[3.75em] min-w-0 outline-none px-4 py-2.5 transition-all duration-300 ease-[cubic-bezier(.23,1,.32,1)] select-none will-change-transform hover:text-white hover:bg-navyBlue hover:shadow-lg hover:translate-y-[-2px] active:shadow-none active:translate-y-0">
+            <Link href="/quiz">Go to Quiz page</Link>
+          </button>
+
+        </div>
+        <style jsx>{`
+        @keyframes moveGradient {
+          0% {
+            background-position: 0% 50%;
+          }
+          50% {
+            background-position: 100% 50%;
+          }
+          100% {
+            background-position: 0% 50%;
+          }
+        }
+      `}</style>
+      </div>
     </div>
   );
 }
