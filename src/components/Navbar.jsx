@@ -144,6 +144,7 @@ export default function Navbar({session}) {
             </ul>
           </section>
           <section className="group flex lg:gap-2 justify-center items-center">
+            {session && <div>Your profile</div>}
             <div className="flex shrink-0">
               {session?.user ? <Btn text="Logout"/> : <Btn text="Login"/>}
             </div>

@@ -110,3 +110,26 @@ export const updateQuizScores = async (quizScores) => {
         return { error: err.message };
     }
 };
+
+export const getUserFromDb = async () => {
+    try {
+        await connectToDB();
+
+        // Fetch the current session
+        const session = await auth();
+        if (!session || !session.user || !session.user.email) {
+            throw new Error('User not authenticated');
+        }
+
+        // Find the user by email
+        const user = await User.findOne({ email: session.user.email });
+        if (!user) {
+            throw new Error('User not found');
+        }
+
+        return user;
+    } catch (err) {
+        console.error("Error fetching user:", err);
+        throw new Error(err.message);
+    }
+};
