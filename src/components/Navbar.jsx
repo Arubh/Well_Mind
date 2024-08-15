@@ -144,7 +144,7 @@ export default function Navbar({session}) {
             </ul>
           </section>
           <section className="group flex lg:gap-2 justify-center items-center">
-            {session && <div><Link href="/profile">Profile</Link></div>}
+            {session && <Btn text="Profile" />}
             <div className="flex shrink-0">
               {session?.user ? <Btn text="Logout"/> : <Btn text="Login"/>}
             </div>
@@ -245,7 +245,7 @@ export default function Navbar({session}) {
             ))}
           </div>
         ))}
-        {session && <div className='pl-[18px] text-txt-sb h-[40px] cursor-pointer mt-4 font-semibold'><Link href="/profile">Profile</Link></div>}
+        {session && <button className='login-btn ml-2 pl-[18px] text-txt-sb h-[40px] cursor-pointer mt-4 font-semibold'><span className='login-btn-content'><Link href="/profile">Profile</Link></span></button>}
         <div className="pl-[17px] mt-[10px]">
         {session?.user ? <Btn text="Logout"/> : <Btn text="Login"/>}
         </div>
