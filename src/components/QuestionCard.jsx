@@ -2,7 +2,7 @@ import React from 'react'
 
 export default function QuestionCard({ questionObject, onAnswer }) {
     return (
-        <div className="lg:pl-[200px] lg:pr-[200px] px-10 pt-8 mt-2">
+        <div className="lg:pl-[200px] lg:pr-[200px] px-10 pt-8 mt-2 mb-[200px]">
             <div className="text-lg font-serif"> Please select any one option based on the question asked below</div>
             <div
                 className="mt-4 lg:text-6xl text-5xl font-bold inline-block text-transparent bg-clip-text h-auto pb-4"

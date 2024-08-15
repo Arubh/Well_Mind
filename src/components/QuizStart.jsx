@@ -2,7 +2,7 @@ import React from 'react'
 
 export default function QuizStart(props) {
   return (
-    <div className="lg:pl-[200px] lg:pr-[400px] px-10 pt-8">
+    <div className="lg:pl-[200px] lg:pr-[400px] px-10 pt-8 mb-[200px]">
       <div id="quiz-box">
         <h2
           className="lg:text-6xl text-5xl font-bold inline-block text-transparent bg-clip-text"

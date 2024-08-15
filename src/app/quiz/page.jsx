@@ -123,7 +123,7 @@ const Quiz = () => {
 
   if (results) {
     return (
-      <div className="lg:pl-[200px] lg:pr-[400px] px-10 pt-8">
+      <div className="lg:pl-[200px] lg:pr-[400px] px-10 pt-8 mb-[200px]">
         <div className="lg:text-4xl text-3xl text-violet font-bold inline-block">Here is a detailed graphical representation of your quiz results</div>
         {/* <h1>Here is a detailed graphical representation of your quiz results. </h1>
         <h2>Detailed Scores</h2>
