@@ -34,7 +34,7 @@ export const Flipwords = ({ words, duration = 1000, className }) => {
         animate={{ opacity: 1, y: 0 }}
         exit={{ opacity: 0, y: -40, x: 40, filter: "blur(8px)", scale: 2, position: "absolute" }}
         transition={{ duration: 0.4, ease: "easeInOut", type: "spring", stiffness: 100, damping: 10 }}
-        className={cn("z-10 inline-block relative font-serif text-left text-[white] dark:text-[white] px-2", className)}
+        className={cn("z-10 inline-block relative font-serif text-left text-[white] dark:text-[white] px-1", className)}
       >
         {currentWord.split("").map((letter, index) => (
           <motion.span

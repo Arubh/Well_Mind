@@ -154,7 +154,7 @@ export default function Navbar({session}) {
 
       <div className="container-style flex lg:hidden justify-center items-center pt-4">
         <nav className="flex items-center justify-between w-full">
-        <div className='flex items-center text-[20px] font-semibold font-serif pl-[40px]'>Wellmind</div>
+        <div className='flex items-center text-[20px] font-semibold font-serif pl-[20px]'>Wellmind</div>
           <div className="flex items-center">
             <svg
               xmlns="http://www.w3.org/2000/svg"

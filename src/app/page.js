@@ -17,9 +17,9 @@ export default function Page() {
           backgroundBlendMode: "multiply",
         }}
       >
-        <div className="text-[60px] mx-auto font-serif align-top text-[white] dark:text-[white]">
-          Nurture your
-          <Flipwords words={words} /> <br />with us
+        <div className="lg:text-[60px] text-[40px] mx-auto font-serif align-top text-[white] dark:text-[white]">
+          Nurture your <br />
+          <Flipwords words={words} /> <br /> with us
         </div>
       </div>
       <div className="mt-[60px] flex flex-col gap-20">
