@@ -196,7 +196,9 @@
             <div key={id} className="flex flex-col">
               <div
                 className="flex justify-between text-[#131313] items-center h-[50px] pl-[17px] pr-[17px] mt-[5px] text-txt-sb cursor-pointer"
-                onClick={() => toggleMobileDropdown(id)}
+                onClick={() => {
+                  toggleMobileDropdown(id); 
+                !(nav==="Services" || nav==="Resources" ) && setToggle(!toggle)}}
               >
                 <Link
                   href={nav === 'Home' ? '/' : nav==='About' ? '/about' : nav==='Contact' ? '/contact' : "#"}
