@@ -40,12 +40,12 @@ export default function Page() {
         backgroundSize: '200% 200%',
       }}>
         <div className="lg:pl-[200px] lg:pr-[400px] px-10 pt-8">
-          <h2
-            className="lg:text-5xl text-2xl font-bold inline-block text-[white]"
+          <div
+            className="lg:text-5xl text-2xl font-bold text-[white]"
           >
             Take a personalised quiz now !
-          </h2>
-          <button className="mt-10 bg-transparent border-2 border-navyBlue rounded-lg text-navyBlue hover:text-[white] cursor-pointer inline-block font-semibold text-base leading-normal m-0 min-h-[3.75em] min-w-0 outline-none px-4 py-2.5 transition-all duration-300 ease-[cubic-bezier(.23,1,.32,1)] select-none will-change-transform hover:text-white hover:bg-navyBlue hover:shadow-lg hover:translate-y-[-2px] active:shadow-none active:translate-y-0">
+          </div>
+          <button className="mt-4 bg-transparent border-2 border-navyBlue rounded-lg text-navyBlue hover:text-[white] cursor-pointer inline-block font-semibold text-base leading-normal m-0 min-h-[3.75em] min-w-0 outline-none px-4 py-2.5 transition-all duration-300 ease-[cubic-bezier(.23,1,.32,1)] select-none will-change-transform hover:text-white hover:bg-navyBlue hover:shadow-lg hover:translate-y-[-2px] active:shadow-none active:translate-y-0">
             <Link href="/quiz">Go to Quiz page</Link>
           </button>
 
