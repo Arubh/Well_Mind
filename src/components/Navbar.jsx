@@ -236,7 +236,8 @@
                   <Link
                     href={subNav.toLowerCase().replace(/ /g, '')}
                     className="text-[black] hover:text-[#0E72E8]"
-                    onClick={handleSubNavClick}
+                    // onClick={handleSubNavClick}
+                    onClick={() => {setToggle(!toggle);handleSubNavClick()}}
                   >
                     {subNav}
                   </Link>
@@ -244,8 +245,8 @@
               ))}
             </div>
           ))}
+          <div className="mt-[10px]" onClick={() => setToggle(!toggle)}>
           {session && <Btn text="Profile" />}
-          <div className="mt-[10px]">
           {session?.user ? <Btn text="Logout"/> : <Btn text="Login"/>}
           </div>
         </div>
