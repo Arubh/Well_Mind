@@ -5,7 +5,7 @@ export default function QuizStart(props) {
     <div className="lg:pl-[200px] lg:pr-[400px] px-10 pt-8 mb-[100px]">
       <div id="quiz-box">
         <h2
-          className="lg:text-6xl text-5xl font-bold inline-block text-transparent bg-clip-text"
+          className="lg:text-5xl text-2xl font-bold inline-block text-transparent bg-clip-text"
           style={{
             backgroundImage: 'linear-gradient(to right, yellow, green, yellow)',
             backgroundSize: '200% 200%', // Double the size for smooth animation

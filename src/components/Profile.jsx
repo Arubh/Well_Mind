@@ -5,7 +5,7 @@ export default function Profile({ user }) {
     return (
         <div className="lg:pl-[200px] lg:pr-[400px] px-10 pt-8 mb-[100px] font-serif">
             <h2
-                className="lg:text-6xl text-5xl font-bold inline-block text-transparent bg-clip-text"
+                className="lg:text-5xl text-2xl font-bold inline-block text-transparent bg-clip-text"
                 style={{
                     backgroundImage: 'linear-gradient(to right, red, pink, pink)',
                     backgroundSize: '200% 200%', // Double the size for smooth animation

@@ -41,7 +41,7 @@ export default function Page() {
       }}>
         <div className="lg:pl-[200px] lg:pr-[400px] px-10 pt-8">
           <h2
-            className="lg:text-6xl text-5xl font-bold inline-block text-[white]"
+            className="lg:text-5xl text-2xl font-bold inline-block text-[white]"
           >
             Take a personalised quiz now !
           </h2>

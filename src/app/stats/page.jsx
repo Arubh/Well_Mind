@@ -9,7 +9,7 @@ export default function page() {
   return (
     <div className='lg:pl-[200px] lg:pr-[200px] px-10 pt-8 mt-2 mb-[200px]'>
       <h2
-        className="lg:text-6xl text-5xl font-bold inline-block text-transparent bg-clip-text"
+        className="lg:text-5xl text-2xl font-bold inline-block text-transparent bg-clip-text"
         style={{
           backgroundImage: 'linear-gradient(to right, red, orange, yellow)',
           backgroundSize: '200% 200%',
