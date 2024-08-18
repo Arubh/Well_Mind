@@ -33,7 +33,7 @@ export default function News() {
     fetchNews(currentPage);
   }, [currentPage]);
 
-  if (status === 'loading') return <div>Loading...</div>;
+  if (status === 'loading') return <div class="loader"><div class="justify-content-center jimu-primary-loading"></div></div>;
   if (status === 'failed') return <div>Error: {error}</div>;
 
   const filteredNews = news.filter(article => article.title !== '[Removed]');
