@@ -9,6 +9,9 @@ const inter = Inter({ subsets: ["latin"] });
 export const metadata = {
   title: "Wellmind",
   description: "a mental health support website",
+  icons: {
+    icon: '/app/favicon.ico',
+  },
 };
 
 export default async function RootLayout({ children }) {

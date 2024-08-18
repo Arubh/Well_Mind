@@ -199,7 +199,7 @@
                 onClick={() => toggleMobileDropdown(id)}
               >
                 <Link
-                  href={nav === 'Home' ? '/' : '#'}
+                  href={nav === 'Home' ? '/' : nav==='About' ? '/about' : nav==='Contact' ? '/contact' : "#"}
                   className="text-[black] hover:text-[#0E72E8]"
                 >
                   {nav}
