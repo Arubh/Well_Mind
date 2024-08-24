@@ -3,7 +3,8 @@ import React, { useState, useEffect } from 'react';
 import PsyCard from '@/components/PsyCard';
 
 const fetchPsychiatrists = async (lat, lng) => {
-    const response = await fetch(`https://discover.search.hereapi.com/v1/discover?at=${lat},${lng}&q=psychiatrist&apiKey=${process.env.NEXT_PUBLIC_PROF_API_KEY}`);
+  const API_KEY="P1jUsMV22SMv-lGtImQH57CIgLM5RD5k4QXwK7EuLQQ"
+    const response = await fetch(`https://discover.search.hereapi.com/v1/discover?at=${lat},${lng}&q=psychiatrist&apiKey=${API_KEY}`);
   if (!response.ok) {
     throw new Error('Failed to fetch psychiatrists');
   }
