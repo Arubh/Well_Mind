@@ -129,12 +129,12 @@ export default function MentalHealthChatbot() {
                     value={userInput}
                     onChange={(e) => setUserInput(e.target.value)}
                     onKeyDown={handleKeyPress}
-                    className="flex p-2 rounded-l-md border-t border-b border-l focus:outline-none focus:border-[blue]"
+                    className="ai-input flex p-2 rounded-l-md border-t border-b border-l focus:outline-none focus:border-[blue]"
                     disabled={loading}
                 />
                 <button
                     onClick={handleSendMessage}
-                    className="p-2 rounded-r-md hover:bg-opacity-80 focus:outline-none"
+                    className="ai-input ml-2"
                     disabled={loading || userInput.trim() === ""} // Disable send button if empty or loading
                 >
                     {loading ? "Sending..." : "Send"}
