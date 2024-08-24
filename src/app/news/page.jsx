@@ -35,7 +35,7 @@ export default function News() {
   }, [currentPage]);
 
   if (status === 'loading') return <div class="loader"><div class="justify-content-center jimu-primary-loading"></div></div>;
-  if (status === 'failed') return <div>Please try again later</div>;
+  if (status === 'failed') return <div className='lg:pl-[200px] lg:pr-[400px] px-10'>Please try again later</div>;
 
   const filteredNews = news.filter(article => article.title !== '[Removed]');
 

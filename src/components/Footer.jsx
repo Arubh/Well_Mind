@@ -4,7 +4,7 @@ import Link from 'next/link';
 export default function Footer() {
   return (
     <footer
-      className="bg-navyBlue text-[white] font-sans text-center lg:text-left mt-[10px]">
+      className="bg-navyBlue text-[white] font-sans text-center lg:text-left mt-[10px] footer">
       <div
         className="flex items-center justify-center border-b-2 border-neutral-200 p-6 dark:border-neutral-500 lg:justify-between">
         <div className="mr-12 hidden lg:block">
