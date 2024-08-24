@@ -98,19 +98,24 @@ export default function MentalHealthChatbot() {
     };
 
     return (
-        <div className="flex flex-col h-screen p-4">
+        <div className="flex flex-col h-[600px] lg:pl-[200px] lg:pr-[400px] px-10 pt-8">
             <div className="flex justify-between items-center mb-4">
-                <h1 className="text-2xl font-bold">Mental Health Assistant</h1>
+                <h1 className="text-2xl font-bold" style={{
+                    backgroundImage: 'linear-gradient(to right, #2596be, #085cac, #604cb4)', // Updated with hex codes
+                    backgroundSize: '200% 200%', // Double the size for smooth animation
+                    animation: 'moveGradient 10s ease infinite', // Attach the animation
+                    WebkitBackgroundClip: 'text',
+                    WebkitTextFillColor: 'transparent',
+                }}>Your own chatbot for mental health assistance</h1>
             </div>
             <div className="flex-1 overflow-y-auto rounded-md p-2">
                 {messages.map((msg, index) => (
                     <div
                         key={index}
-                        className={`mb-4 text-right ${msg.role === "user" ? "text-right" : "text-left"}`}
+                        className={`mb-4 ${msg.role === "user" ? "text-right" : "text-left"}`}
                     >
-                        <span className="p-2 rounded-lg">{msg.text}</span>
-                        <p className="text-xs mt-1">
-                            {msg.role === "bot" ? "Bot" : "You"} -{" "}
+                        <span className="p-2 rounded-lg font-serif">{msg.text}</span>
+                        <p className="text-[12px] mt-1">
                             {msg.timestamp.toLocaleTimeString()}
                         </p>
                     </div>
