@@ -4,9 +4,9 @@ import Link from 'next/link';
 export default function Footer() {
   return (
     <footer
-      className="bg-navyBlue text-[white] font-sans text-center lg:text-left mt-[10px] footer">
+      className="bg-navyBlue font-sans text-center lg:text-left mt-[10px] footer">
       <div
-        className="flex items-center justify-center border-b-2 border-neutral-200 p-6 dark:border-neutral-500 lg:justify-between">
+        className="relative flex items-center justify-center border-b-2 border-neutral-200 p-6 dark:border-neutral-500 lg:justify-between">
         <div className="mr-12 hidden lg:block">
           <span>Get connected with us on social networks:</span>
         </div>
@@ -76,7 +76,7 @@ export default function Footer() {
         </div>
       </div>
 
-      <div className="mx-6 py-10 text-center md:text-left">
+      <div className="relative mx-6 py-10 text-center md:text-left">
         <div className="grid-1 grid gap-8 md:grid-cols-2 lg:grid-cols-4">
           <div className="">
             <h6
@@ -200,7 +200,7 @@ export default function Footer() {
           </div>
         </div>
       </div>
-      <div className="bg-neutral-200 p-6 text-center dark:bg-neutral-700">
+      <div className="relative bg-neutral-200 p-6 text-center dark:bg-neutral-700">
         <span>© 2024 Copyright:</span>
         <a
           className="font-semibold text-neutral-600 dark:text-neutral-400"
