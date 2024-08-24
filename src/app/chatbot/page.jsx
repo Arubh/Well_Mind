@@ -98,7 +98,7 @@ export default function MentalHealthChatbot() {
     };
 
     return (
-        <div className="flex flex-col h-[600px] lg:pl-[200px] lg:pr-[400px] px-10 pt-8">
+        <div className="flex flex-col h-[550px] lg:pl-[200px] lg:pr-[400px] px-10 pt-8">
             <div className="flex justify-between items-center mb-4">
                 <h1 className="text-2xl font-bold" style={{
                     backgroundImage: 'linear-gradient(to right, #2596be, #085cac, #604cb4)', // Updated with hex codes

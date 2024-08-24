@@ -34,9 +34,10 @@ export const authConfig = {
             const isOnLoginPage = request.nextUrl?.pathname.startsWith("/login");
             const isOnRegisterPage = request.nextUrl?.pathname.startsWith("/register");
             const isOnProfilePage = request.nextUrl?.pathname.startsWith("/profile");
+            const isOnChatPage = request.nextUrl?.pathname.startsWith("/chatbot");
 
             //only admins can read /admin page
-            if ((isOnNewsPage || isOnProfPage || isOnQuizPage ||  isOnProfilePage) && !user) {
+            if ((isOnNewsPage || isOnProfPage || isOnQuizPage ||  isOnProfilePage || isOnChatPage) && !user) {
                 return false
                 //returning false will redirect the users to the page that we have mentioned above
             }
