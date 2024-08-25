@@ -3,7 +3,7 @@ import React, { useEffect, useState } from 'react';
 import NewsCard from '@/components/newsCard';
 
 const API_KEY=""
-const BASE_URL = `https://newsapi.org/v2/top-headlines?language=en&category=health&pageSize=6&apiKey=${process.env.NEXT_PUBLIC_API_KEY}`;
+const BASE_URL = `https://newsapi.org/v2/top-headlines?language=en&category=health&pageSize=6&apiKey=${process.env.NEXT_PUBLIC_API}`;
 
 export default function News() {
   const [news, setNews] = useState([]);
