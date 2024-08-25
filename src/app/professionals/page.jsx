@@ -12,7 +12,7 @@ const fetchPsychiatrists = async (lat, lng) => {
 };
 
 const fetchUserLocation = () => { 
-  return new Promise((resolve, reject) => {
+  return new Promise((resolve, reject) => { 
     if (navigator.geolocation) {
       navigator.geolocation.getCurrentPosition(
         position => {

@@ -17,11 +17,12 @@ export default function News() {
     const fetchNews = async (page = 1) => {
       setStatus('loading'); 
       try {
-        const response = await fetch(`${BASE_URL}&page=${page}`, { cache: "no-store" });
+        const response = await fetch(`${BASE_URL}&page=${page}`);
         if (!response.ok) {
-          throw new Error('Network response w as not ok');
+          throw new Error('Network response was not ok');
         }
         const data = await response.json();
+        console.log(data)
         setNews(data.articles);
         setTotalResults(data.totalResults);
         setStatus('succeeded');
