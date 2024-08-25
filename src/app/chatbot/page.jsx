@@ -108,16 +108,16 @@ export default function MentalHealthChatbot() {
                     WebkitTextFillColor: 'transparent',
                 }}>Your own chatbot for mental health assistance</h1>
             </div>
-            <div className="flex-1 overflow-y-auto rounded-md p-2">
+            <div className="flex-1 overflow-y-scroll rounded-md p-2">
                 {messages.map((msg, index) => (
                     <div
                         key={index}
-                        className={`mb-4 ${msg.role === "user" ? "text-right" : "text-left"}`}
+                        className={`block`}
                     >
-                        <span className="p-2 rounded-lg font-serif">{msg.text}</span>
-                        <p className="text-[12px] mt-1">
+                        <div className={`rounded-[10px] font-serif bg-[#7272ef] gap-4 p-6 mt-4 flex ${msg.role === "user" ? "justify-end" : "justify-start"}`}>{msg.text}</div>
+                        <div className={`text-[12px] mt-1 flex ${msg.role === "user" ? "justify-end" : "justify-start"}`}>
                             {msg.timestamp.toLocaleTimeString()}
-                        </p>
+                        </div>
                     </div>
                 ))}
             </div>
