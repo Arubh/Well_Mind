@@ -105,6 +105,10 @@ export default function Footer() {
               >Quiz</Link>
             </p>
             <p className="mb-4">
+              <Link href="/chatbot" className="text-neutral-600 dark:text-neutral-200"
+              >Chatbot</Link>
+            </p>
+            <p className="mb-4">
               <Link href="/professionals" className="text-neutral-600 dark:text-neutral-200"
               >Professional Help</Link>
             </p>
