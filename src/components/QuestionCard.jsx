@@ -7,9 +7,9 @@ export default function QuestionCard({ questionObject, onAnswer }) {
             <div
                 className="mt-4 lg:text-5xl text-2xl font-bold inline-block text-transparent bg-clip-text h-auto pb-4"
                 style={{
-                    backgroundImage: 'linear-gradient(to right, #2596be, #085cac, #604cb4)', // Updated with hex codes
-                    backgroundSize: '200% 200%', // Double the size for smooth animation
-                    animation: 'moveGradient 10s ease infinite', // Attach the animation
+                    backgroundImage: 'linear-gradient(to right, #2596be, #085cac, #604cb4)',
+                    backgroundSize: '200% 200%', 
+                    animation: 'moveGradient 10s ease infinite', 
                     WebkitBackgroundClip: 'text',
                     WebkitTextFillColor: 'transparent',
                 }}

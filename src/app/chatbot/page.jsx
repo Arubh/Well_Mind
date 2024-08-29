@@ -60,7 +60,7 @@ export default function MentalHealthChatbot() {
     }, [messages]);
 
     const handleSendMessage = async () => {
-        if (userInput.trim() === "") return; // Prevent sending empty messages
+        if (userInput.trim() === "") return;
         setLoading(true);
         try {
             const userMessage = {
@@ -101,9 +101,9 @@ export default function MentalHealthChatbot() {
         <div className="flex flex-col h-[550px] lg:pl-[200px] lg:pr-[400px] px-10 pt-8">
             <div className="flex justify-between items-center mb-4">
                 <h1 className="text-2xl font-bold" style={{
-                    backgroundImage: 'linear-gradient(to right, #2596be, #085cac, #604cb4)', // Updated with hex codes
-                    backgroundSize: '200% 200%', // Double the size for smooth animation
-                    animation: 'moveGradient 10s ease infinite', // Attach the animation
+                    backgroundImage: 'linear-gradient(to right, #2596be, #085cac, #604cb4)',
+                    backgroundSize: '200% 200%',
+                    animation: 'moveGradient 10s ease infinite',
                     WebkitBackgroundClip: 'text',
                     WebkitTextFillColor: 'transparent',
                 }}>Your own chatbot for mental health assistance</h1>
@@ -135,7 +135,7 @@ export default function MentalHealthChatbot() {
                 <button
                     onClick={handleSendMessage}
                     className="ai-input ml-2"
-                    disabled={loading || userInput.trim() === ""} // Disable send button if empty or loading
+                    disabled={loading || userInput.trim() === ""}
                 >
                     {loading ? "Sending..." : "Send"}
                 </button>

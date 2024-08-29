@@ -5,8 +5,6 @@ export default function NewsCard({ news }) {
   if (!news) {
     return <h1>No news available</h1>;
   }
-
-  // Destructure properties from news object
   const { title, author, urlToImage, description, url } = news;
 
   return (

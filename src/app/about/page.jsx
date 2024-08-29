@@ -7,8 +7,8 @@ export default function page() {
                 className="lg:text-5xl text-2xl font-bold inline-block text-transparent bg-clip-text"
                 style={{
                     backgroundImage: 'linear-gradient(to right, #085cac, #2596be, blue)',
-                    backgroundSize: '200% 200%', // Double the size for smooth animation
-                    animation: 'moveGradient 10s ease infinite', // Attach the animation
+                    backgroundSize: '200% 200%',
+                    animation: 'moveGradient 10s ease infinite',
                     WebkitBackgroundClip: 'text',
                     WebkitTextFillColor: 'transparent',
                 }}

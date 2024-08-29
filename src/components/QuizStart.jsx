@@ -8,8 +8,8 @@ export default function QuizStart(props) {
           className="lg:text-5xl text-2xl font-bold inline-block text-transparent bg-clip-text"
           style={{
             backgroundImage: 'linear-gradient(to right, yellow, green, yellow)',
-            backgroundSize: '200% 200%', // Double the size for smooth animation
-            animation: 'moveGradient 10s ease infinite', // Attach the animation
+            backgroundSize: '200% 200%', 
+            animation: 'moveGradient 10s ease infinite',
             WebkitBackgroundClip: 'text',
             WebkitTextFillColor: 'transparent',
           }} 

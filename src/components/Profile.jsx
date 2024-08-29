@@ -1,5 +1,4 @@
-// app/profile/UserProfileClient.js (or your desired path)
-'use client'; // Mark as a client component
+'use client';
 
 export default function Profile({ user }) {
     return (
@@ -8,8 +7,8 @@ export default function Profile({ user }) {
                 className="lg:text-5xl text-2xl font-bold inline-block text-transparent bg-clip-text"
                 style={{
                     backgroundImage: 'linear-gradient(to right, red, pink, pink)',
-                    backgroundSize: '200% 200%', // Double the size for smooth animation
-                    animation: 'moveGradient 10s ease infinite', // Attach the animation
+                    backgroundSize: '200% 200%',
+                    animation: 'moveGradient 10s ease infinite',
                     WebkitBackgroundClip: 'text',
                     WebkitTextFillColor: 'transparent',
                 }}

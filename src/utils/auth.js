@@ -40,7 +40,7 @@ const generateUniqueUsername = async (baseUsername) => {
 
 export const { handlers: { GET, POST }, auth, signIn, signOut } =
   NextAuth({
-    ...authConfig, // Extend the authConfig object here
+    ...authConfig,
     providers: [
       GoogleProvider({
         clientId: process.env.GOOGLE_CLIENT_ID,

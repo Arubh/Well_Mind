@@ -59,7 +59,6 @@ export const handleRegister = async (previousState, formData) => {
     }
 };
 export const handleLogin = async (formData) => {
-    console.log("formData",formData);
 
     try {
         const res = await signIn("credentials", { 
@@ -68,7 +67,6 @@ export const handleLogin = async (formData) => {
             redirect: false, });
         return res;
     } catch (err) {
-        console.log("5555555555555555"+err);
 
         if (err.message.includes("CredentialsSignin")) {
             return { error: "Invalid username or password" };
@@ -80,26 +78,21 @@ export const handleLogin = async (formData) => {
 export const updateQuizScores = async (quizScores) => {
     'use server'
     try {
-        // Connect to the database
         await connectToDB();
-
-        // Fetch the current session
         const session = await auth();
         if (!session || !session.user || !session.user.email) {
             throw new Error('User not authenticated');
         }
 
-        // Find the user by email (or username if you prefer)
         const user = await User.findOne({ email: session.user.email });
         if (!user) {
             throw new Error('User not found');
         }
 
-        // Update or create quiz scores
         const updatedUser = await User.findOneAndUpdate(
             { email: session.user.email },
             { $set: { scores: quizScores } },
-            { new: true} // `upsert` creates a new document if one doesn't exist
+            { new: true} 
         );
 
         console.log("Quiz scores updated:", updatedUser);
@@ -115,13 +108,11 @@ export const getUserFromDb = async () => {
     try {
         await connectToDB();
 
-        // Fetch the current session
         const session = await auth();
         if (!session || !session.user || !session.user.email) {
             throw new Error('User not authenticated');
         }
 
-        // Find the user by email
         const user = await User.findOne({ email: session.user.email });
         if (!user) {
             throw new Error('User not found');
