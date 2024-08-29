@@ -22,20 +22,9 @@ export default function Page() {
           <Flipwords words={words} /> <br /> with us
         </div>
       </div>
-      <div className="mt-[60px] flex flex-col gap-20">
-        {homeProps.map((props, index) => (
-          <HomeCard
-            key={index}
-            pos_left={!props.imageRight} // Use imageRight to determine the position
-            extraLarge={props.extraLarge} // Pass extraLarge property
-            description={props.description}
-            heading={props.heading}
-            imageURL={props.imageURL}
-            title={props.title} />
-        ))}
-      </div>
-      <div className="bg-violet mt-16 h-[300px] mb-[100px] flex justify-center items-center" style={{
-        backgroundImage: 'linear-gradient(to right, red, pink, violet)',
+
+      <div className="bg-[#5d175d] mt-16 h-[300px] mb-[100px] flex justify-center items-center" style={{
+        backgroundImage: 'linear-gradient(to right, #cb5acb, #5d175d, #cb5acb)',
         animation: 'moveGradient 5s ease infinite',
         backgroundSize: '200% 200%',
       }}>
@@ -45,7 +34,7 @@ export default function Page() {
           >
             Take a personalised quiz now !
           </div>
-          <button className="mt-4 bg-transparent border-2 border-navyBlue rounded-lg text-navyBlue hover:text-[white] cursor-pointer inline-block font-semibold text-base leading-normal m-0 min-h-[3.75em] min-w-0 outline-none px-4 py-2.5 transition-all duration-300 ease-[cubic-bezier(.23,1,.32,1)] select-none will-change-transform hover:text-white hover:bg-navyBlue hover:shadow-lg hover:translate-y-[-2px] active:shadow-none active:translate-y-0">
+          <button className="mt-4 bg-transparent border-2 border-[white] rounded-lg text-[white] hover:text-[white] hover:border-navyBlue cursor-pointer inline-block font-semibold text-base leading-normal m-0 min-h-[3.75em] min-w-0 outline-none px-4 py-2.5 transition-all duration-300 ease-[cubic-bezier(.23,1,.32,1)] select-none will-change-transform hover:text-white hover:bg-navyBlue hover:shadow-lg hover:translate-y-[-2px] active:shadow-none active:translate-y-0">
             <Link href="/quiz">Go to Quiz page</Link>
           </button>
 
@@ -63,6 +52,19 @@ export default function Page() {
           }
         }
       `}</style>
+      </div>
+
+      <div className="mt-[60px] flex flex-col gap-20">
+        {homeProps.map((props, index) => (
+          <HomeCard
+            key={index}
+            pos_left={!props.imageRight} // Use imageRight to determine the position
+            extraLarge={props.extraLarge} // Pass extraLarge property
+            description={props.description}
+            heading={props.heading}
+            imageURL={props.imageURL}
+            title={props.title} />
+        ))}
       </div>
     </div>
   );
