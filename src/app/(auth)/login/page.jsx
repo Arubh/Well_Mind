@@ -28,7 +28,7 @@ const LoginPage = () => {
       backgroundBlendMode: "multiply",
     }}
     >
-    <div className="bg-[#faf8f8] lg:w-[25%] w-[50%] rounded-[15px] flex flex-col items-center mt-10">
+    <div className="bg-[#faf8f8] lg:w-[25%] w-[80%] rounded-[15px] flex flex-col items-center mt-10">
         <LoginForm />
       </div>
     </div>
