@@ -84,6 +84,7 @@ export default function MentalHealthChatbot() {
             }
         } catch (error) {
             console.error(error);
+            alert("The message does not satisfy the ")
             setError("Failed to send message. Please try again.");
         } finally {
             setLoading(false);
