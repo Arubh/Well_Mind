@@ -69,7 +69,7 @@
 
     return (
       <>
-        <div className="font-serif container-style items-center justify-center lg:flex hidden pt-2 px-[200px] mb-2">
+        <div className="font-serif container-style items-center justify-center lg:flex hidden py-4 px-[200px] border-b-[1px] border-[black]">
           <nav className="flex justify-between w-full text-header-mobile-sb transition-all">
             <section className="flex justify-between shrink-0">
             <Link href="/" className='flex items-center text-navyBlue text-[30px] font-semibold font-serif'>Wellmind</Link>

@@ -53,7 +53,7 @@ const ProfessionalsPage = () => {
 
   return (
     <div className='mb-[100px]'>
-      <div className="bg-cover bg-center h-[640px] mt-6 bg-blend-multiply pt-[200px]" style={{ backgroundImage: "url('/images/psy.jpg')", backgroundColor: "rgba(0, 0, 0, 0.6)", backgroundBlendMode: "multiply" }}>
+      <div className="bg-cover bg-center h-[700px] bg-blend-multiply pt-[200px]" style={{ backgroundImage: "url('/images/psy1.jpg')", backgroundColor: "rgba(0, 0, 0, 0.6)", backgroundBlendMode: "multiply" }}>
         <div className='text-[white] lg:text-8xl text-5xl font-bold text-center w-full'>Psychiatrists near you</div>
         <div className='flex justify-center'>
           <button onClick={handleLocationFetch} disabled={loading} className='fetch mt-10'>

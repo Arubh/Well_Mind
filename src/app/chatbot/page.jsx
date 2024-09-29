@@ -84,7 +84,6 @@ export default function MentalHealthChatbot() {
             }
         } catch (error) {
             console.error(error);
-            alert("The message does not satisfy the ")
             setError("Failed to send message. Please try again.");
         } finally {
             setLoading(false);
@@ -99,23 +98,23 @@ export default function MentalHealthChatbot() {
     };
 
     return (
-        <div className="flex flex-col h-[550px] lg:pl-[200px] lg:pr-[400px] px-10 pt-8">
-            <div className="flex justify-between items-center mb-4">
-                <h1 className="text-2xl font-bold" style={{
-                    backgroundImage: 'linear-gradient(to right, #2596be, #085cac, #604cb4)',
-                    backgroundSize: '200% 200%',
-                    animation: 'moveGradient 10s ease infinite',
-                    WebkitBackgroundClip: 'text',
-                    WebkitTextFillColor: 'transparent',
-                }}>Your own chatbot for mental health assistance</h1>
+        <div className="flex flex-col h-[700px] lg:pl-[200px] lg:pr-[400px] px-10 pt-8 pb-[100px]"
+        style={{
+            backgroundImage: "url('/images/face.jpg')",
+            backgroundColor: "rgba(0, 0, 0, 0.6)",
+            backgroundBlendMode: "multiply",
+          }}
+        >
+            <div className="flex justify-between items-center mb-2">
+                <h1 className="text-4xl font-bold text-[#9b9b1d]">Your own chatbot for mental health assistance</h1>
             </div>
-            <div className="flex-1 overflow-y-scroll rounded-md p-2">
+            <div className="overflow-y-scroll rounded-md p-2 h-[500px]">
                 {messages.map((msg, index) => (
                     <div
                         key={index}
                         className={`block`}
                     >
-                        <div className={`rounded-[10px] font-serif bg-[#7272ef] gap-4 p-6 mt-4 flex ${msg.role === "user" ? "justify-end" : "justify-start"}`}>{msg.text}</div>
+                        <div className={`rounded-[40px] font-serif bg-[white] text-[15px] text-[black] gap-4 px-6 py-2 mt-4 flex ${msg.role === "user" ? "justify-end" : "justify-start"}`}>{msg.text}</div>
                         <div className={`text-[12px] mt-1 flex ${msg.role === "user" ? "justify-end" : "justify-start"}`}>
                             {msg.timestamp.toLocaleTimeString()}
                         </div>
@@ -135,7 +134,7 @@ export default function MentalHealthChatbot() {
                 />
                 <button
                     onClick={handleSendMessage}
-                    className="ai-input ml-2"
+                    className="ai-input ml-2 bg-[white]"
                     disabled={loading || userInput.trim() === ""}
                 >
                     {loading ? "Sending..." : "Send"}

@@ -2,17 +2,16 @@ import React from 'react'
 
 export default function QuizStart(props) {
   return (
-    <div className="lg:pl-[200px] lg:pr-[400px] px-10 pt-8 mb-[100px]">
+    <div className="lg:pl-[200px] h-[700px] lg:pr-[400px] px-10 mb-[100px] pt-[100px]"
+    style={{
+      backgroundImage: "url('/images/footer.jpg')",
+      backgroundColor: "rgba(0, 0, 0, 0.6)",
+      backgroundBlendMode: "multiply",
+    }}
+    >
       <div id="quiz-box">
         <h2
-          className="lg:text-5xl text-2xl font-bold inline-block text-transparent bg-clip-text"
-          style={{
-            backgroundImage: 'linear-gradient(to right, yellow, green, yellow)',
-            backgroundSize: '200% 200%', 
-            animation: 'moveGradient 10s ease infinite',
-            WebkitBackgroundClip: 'text',
-            WebkitTextFillColor: 'transparent',
-          }} 
+          className="text-5xl font-bold inline-block text-[#cccc25]" 
         > 
           Are you ready to predict your mental health status?
         </h2>

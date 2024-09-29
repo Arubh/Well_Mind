@@ -56,7 +56,7 @@ module.exports = {
       }  
     },
     colors: {
-      'navyBlue': '#085cac',
+      'navyBlue': '#a99e2c',
       'violet': '#604cb4',
       'azure': '#2596be',
     }

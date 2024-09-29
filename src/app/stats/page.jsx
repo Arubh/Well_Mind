@@ -20,7 +20,7 @@ export default function page() {
       >
         Statistical data from the past years
       </h2>
-      <div className="flip-card md:w-[680px] w-auto h-[50vw] md:h-[41vw] lg:h-[33vw] xl:h-[28vw] mt-10">
+      <div className="flip-card md:w-[680px] w-auto h-[50vw] md:h-[41vw] lg:h-[33vw] xl:h-[28vw] mt-10 z-[-400]">
         <div className="flip-card-inner">
           <div className="flip-card-front">
             <div className="chart-divs">

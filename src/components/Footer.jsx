@@ -4,7 +4,13 @@ import Link from 'next/link';
 export default function Footer() {
   return (
     <footer
-      className="bg-navyBlue font-sans text-center lg:text-left mt-[100px] footer z-[-100]">
+      className="bg-navyBlue font-sans text-center lg:text-left z-[-100] text-[white]"
+      style={{
+        backgroundImage: "url('/images/footer.jpg')",
+        backgroundColor: "rgba(0, 0, 0, 0.6)",
+        backgroundBlendMode: "multiply",
+      }}
+      >
       <div
         className="relative flex items-center justify-center border-b-2 border-neutral-200 p-6 dark:border-neutral-500 lg:justify-between">
         <div className="mr-12 hidden lg:block">

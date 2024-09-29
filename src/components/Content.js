@@ -48,7 +48,7 @@ const workingStepsContent = [
 
   const homeProps = [
     {
-      imageURL: '/images/depression.jpg',
+      imageURL: '/images/home.jpg',
       title: 'Understanding Depression',
       heading: 'Breaking the Stigma of Mental Health.',
       description: 'Depression is a common yet serious mood disorder that affects how you feel, think, and handle daily activities. It is essential to recognize the signs and seek help to manage this condition effectively.',
@@ -56,7 +56,7 @@ const workingStepsContent = [
       imageRight: false,
     },
     {
-      imageURL: '/images/ptsd.jpg',
+      imageURL: '/images/afro.jpg',
       title: 'Living with PTSD',
       heading: 'Coping with Post-Traumatic Stress Disorder.',
       description: 'PTSD is a mental health condition triggered by a terrifying event. It involves intense, disturbing thoughts and feelings related to the traumatic experience, even long after the event has ended.',
@@ -64,7 +64,7 @@ const workingStepsContent = [
       imageRight: true,
     },
     {
-      imageURL: '/images/peace.jpg',
+      imageURL: '/images/afro2.jpg',
       title: 'Managing Anxiety',
       heading: 'Finding Peace in a Stressful World.',
       description: 'Anxiety disorders involve excessive fear or worry that can interfere with daily life. Understanding the triggers and learning coping mechanisms are vital steps in managing anxiety.',
@@ -72,7 +72,7 @@ const workingStepsContent = [
       imageRight: false,
     },
     {
-      imageURL: '/images/suicide.jpg',
+      imageURL: '/images/afro3.jpg',
       title: 'Addressing Suicide Rates',
       heading: 'Preventing the Unthinkable.',
       description: 'Suicide is a global health crisis that takes nearly 800,000 lives each year. Awareness, support, and intervention are crucial in preventing these tragic losses.',
@@ -80,7 +80,7 @@ const workingStepsContent = [
       imageRight: true, 
     },
     {
-      imageURL: '/images/mental.jpg',
+      imageURL: '/images/psy.jpg',
       title: 'Overall Mental Health',
       heading: 'Nurturing a Balanced Mind.',
       description: 'Mental health encompasses emotional, psychological, and social well-being. It affects how we think, feel, and act. Promoting mental health is vital for overall well-being and quality of life.',

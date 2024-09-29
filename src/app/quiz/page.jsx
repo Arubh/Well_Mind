@@ -118,8 +118,8 @@ const Quiz = () => {
       }
     }
   }, [results]); 
-
-  if (results) {
+ 
+  if (results) { 
     return (
       <div className="lg:pl-[200px] lg:pr-[400px] px-10 pt-8 mb-[200px]">
         <div className="lg:text-4xl text-3xl text-violet font-bold inline-block">Here is a detailed graphical representation of your quiz results</div>
@@ -139,7 +139,7 @@ const Quiz = () => {
                 </ul>
               </div>
 
-              <div className="mt-[40px]">Hover to see the graph</div>
+              <div className="mt-[40px] text-[30px] font-semibold">Hover to see the graph</div>
             </div>
             <div className="flip-card-back flex justify-center">
               <div className="my-auto">
