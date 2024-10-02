@@ -78,7 +78,7 @@ export default function Page() {
         </div>
       </div>
 
-      <div className="flex mt-[-70px] lg:flex-row flex-col lg:pl-[170px] lg:pr-[190px] px-10 pt-8 items-center">
+      <div className="flex mt-[-70px] lg:flex-row flex-col-reverse lg:pl-[170px] lg:pr-[190px] px-10 pt-8 items-center">
       <div className="bounce-animation lg:mr-[40px] lg:mt-0 mt-[60px]">
           <Image src="/images/chat1.jpg" width={420} height={420}></Image>
         </div>
