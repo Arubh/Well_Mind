@@ -72,7 +72,7 @@ export default function MentalHealthChatbot() {
             setUserInput("");
 
             if (chat) {
-                const prompt = `You are a mental health assistant. Please respond to the following user input with empathy and understanding. Provide helpful suggestions or resources if appropriate.\n\nUser: "${userInput}"\nBot:`;
+                const prompt = `You are a mental health assistant. Please respond to the following user input with empathy and understanding pnly if it is related to mental health. Provide helpful suggestions or resources if appropriate.\n\nUser: "${userInput}"\nBot:`;
 
                 const result = await chat.sendMessage(prompt);
                 const botMessage = {
